@@ -8,16 +8,16 @@ function getTitles(){
   for(elm of a_tags){
     if (elm.id == "video-title"){
       var i =  getrating(elm.title.toLowerCase());
-      elm.innerHTML = ("KV-> " + "<img src=\"https://raw.githubusercontent.com/sayak119/Knowledge-Value/master/icons/logo.png\" height=\"15px\" width=\"15px\">" + i.toString() + "% ").bold().big() + "    " + elm.title;
+      elm.innerHTML = ("<img src=\"https://raw.githubusercontent.com/anikulkarni100/content-value/main/icons/elearning.png\" height=\"15px\" width=\"15px\">" + i.toString() + "% ").bold().big() + "    " + elm.title;
     }
   }
   let b_tags = document.getElementsByTagName('span');
-      for(elm of b_tags){
-        if (elm.id == "video-title"){
-          var i =  getrating(elm.title.toLowerCase());
-          elm.innerHTML = ("KV->  "+ "<img src=\"https://raw.githubusercontent.com/sayak119/Knowledge-Value/master/icons/logo.png\" height=\"15px\" width=\"15px\">" + i.toString() + "% ").bold().big() + "    " + elm.title;
-        }
+    for(elm of b_tags){
+      if (elm.id == "video-title"){
+        var i =  getrating(elm.title.toLowerCase());
+        elm.innerHTML = ("<img src=\"https://raw.githubusercontent.com/anikulkarni100/content-value/main/icons/elearning.png\" height=\"15px\" width=\"15px\">" + i.toString() + "% ").bold().big() + "    " + elm.title;
       }
+    }
 }
 
 function read(){
@@ -26,7 +26,7 @@ function read(){
   xmlhttp.onreadystatechange = function(){
   if(xmlhttp.status == 200 && xmlhttp.readyState == 4){}
   };
-  xmlhttp.open("GET","https://raw.githubusercontent.com/sayak119/Knowledge-Value/master/src/wordList.txt" ,true);
+  xmlhttp.open("GET","https://raw.githubusercontent.com/anikulkarni100/content-value/main/src/wordList.txt" ,true);
   xmlhttp.send();
   return this;
 }
